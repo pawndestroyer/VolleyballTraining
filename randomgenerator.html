@@ -12,11 +12,11 @@
         setTimeout(function() {
           document.getElementById('mainBody').style.backgroundColor = 'white';
           document.getElementById('number').innerText = Math.floor(Math.random() * 100) + 1;
-        }, 1000);  // 1-second delay
+        }, 3000);  // 3-second delay
       }
 
-      // Refresh every 20 seconds
-      setInterval(refreshNumber, 20000);
+      // Refresh every 10 seconds
+      setInterval(refreshNumber, 10000);
       
       // Show the first number immediately when the page loads
       refreshNumber();
