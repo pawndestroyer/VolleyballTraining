@@ -1,12 +1,21 @@
 <html>
-<body style="display:flex;justify-content:center;align-items:center;height:100vh;font-size:500px;">
+  <body id="main-body" style="display:flex;justify-content:center;align-items:center;height:100vh;font-size:500px;background-color:white;">
     <div id="number"></div>
     <script>
-        function refreshNumber() {
-            document.getElementById('number').innerText = Math.floor(Math.random() * 100) + 1;
-        }
-        setInterval(refreshNumber, 10000);  // 10 seconds interval
-        refreshNumber();  // Initial call to display a number
+      function refreshNumber() {
+        // Set the background to blue first
+        document.getElementById('mainBody').style.backgroundColor = 'blue';
+        document.getElementById('number').innerText = ''; // Clear the number
+
+        // After 1 second, change the background back to white and show the new number
+        setTimeout(function() {
+          document.getElementById('mainBody').style.backgroundColor = 'white';
+          document.getElementById('number').innerText = Math.floor(Math.random() * 100) + 1;
+        }, 3000);  // 3 second delay for blue screen
+      }
+
+      setInterval(refreshNumber, 10000);  // 10 seconds interval
+      refreshNumber();  // Initial call to display a number
     </script>
-</body>
+  </body>
 </html>
